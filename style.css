@@ -1,0 +1,124 @@
+
+
+body {
+  background-color: #07002c;  
+}
+#gameContainer{ 
+    display: flex;
+    flex-direction: column;
+   font-family : "Permanent Marker" , cursive;
+    text-align: center;
+   
+  color: #00c3ff;
+
+}
+
+#cellContainer{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    margin: auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(1, 73, 63);
+  font-size: 50px;
+  cursor: pointer;
+  color: #006b8c;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cell:hover{
+    background-color: rgb(28, 0, 46);
+   color:rgb(96, 175, 6);
+
+}
+
+.score {
+  font-size: 24px;
+  color:#006280;
+  
+}
+
+#buttonContainer{
+    margin-top: 20px;
+}
+
+button {
+  background-color: rgb(38, 4, 228);  
+  color: white;                       
+  font-size: 16px;
+  cursor: pointer;
+  
+  margin-right: 8px;
+}
+
+ 
+
+
+#restart{
+    background-color: rgb(4, 64, 228);  
+    color: #000000;                       
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-right: 8px;
+
+
+}
+
+#restart:hover {
+  background-color: rgb(28, 0, 46);
+  color: rgb(96, 175, 6);
+}
+
+#reset{
+    background-color: rgb(4, 64, 228);  
+    color: #000000;                         
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 16px;
+}
+
+#reset:hover {  
+   background-color: rgb(28, 0, 46);
+  color: rgb(96, 175, 6);
+}
+
+
+#modeSelector {
+  margin: 10px auto 20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.modeBtn {
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid rgb(1, 73, 63);
+  background: transparent;
+  color: #003c4f;
+  border-radius: 6px;
+  margin: 0 4px;
+}
+
+.modeBtn.active {
+  background-color: rgb(0, 119, 103);
+}
+.modeBtn:hover {
+  background-color: rgb(28, 0, 46);
+  color: rgb(96, 175, 6);
+}
