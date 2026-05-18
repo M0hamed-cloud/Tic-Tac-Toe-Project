@@ -4,6 +4,8 @@ const restartbtn = document.querySelector("#restart");
 const resetScoreBtn = document.querySelector("#reset");
 const xscoreDisplay = document.querySelector("#xscore");
 const oscoreDisplay = document.querySelector("#oscore");
+const pvpBtn = document.querySelector("#pvpBtn");
+const aiBtn = document.querySelector("#aiBtn");
 
 const winconditions = 
 [
@@ -28,22 +30,26 @@ initializegame();
 
 function initializegame() {
     cells.forEach(cell => cell.addEventListener("click", cellclicked));
+
     restartbtn.addEventListener("click", restartgame);
+
     resetScoreBtn.addEventListener("click", resetScores);
+
     statustext.textContent = `${currentplayer}'s turn`;
     running = true;
 
-    document.querySelector("#pvpBtn").addEventListener("click", () => {
+    pvpBtn.addEventListener("click", () => {
         vsAI = false;
-        document.querySelector("#pvpBtn").classList.add("active");
-        document.querySelector("#aiBtn").classList.remove("active");
+        pvpBtn.classList.add("active");
+        aiBtn.classList.remove("active");
         restartgame();
+
     });
 
-    document.querySelector("#aiBtn").addEventListener("click", () => {
+    aiBtn.addEventListener("click", () => {
         vsAI = true;
-        document.querySelector("#aiBtn").classList.add("active");
-        document.querySelector("#pvpBtn").classList.remove("active");
+        aiBtn.classList.add("active");
+        pvpBtn.classList.remove("active");
         restartgame();
     });
 }
